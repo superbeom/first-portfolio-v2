@@ -9,7 +9,6 @@ export { default as Skills } from "./Skills";
 export { default as Projects } from "./Projects";
 export { default as ContactMe } from "./ContactMe";
 
-export { default as Circles } from "./Circles";
 export { default as MotionNav } from "./MotionNav";
 export { default as MotionContainer } from "./MotionContainer";
 export { default as ExperienceCard } from "./ExperienceCard";

@@ -21,18 +21,6 @@ module.exports = {
         "dark-background-50": "rgba(54, 54, 54, 0.5)",
         "white-light": "#F0F0F0",
       },
-      keyframes: {
-        "opposite-ping": {
-          "0%": {
-            transform: "scale(-1)",
-            opacity: 0,
-          },
-        },
-      },
-      animation: {
-        "slow-ping": "ping 2s cubic-bezier(0, 0, 0.2, 1) infinite",
-        "opposite-ping": "opposite-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite",
-      },
     },
   },
   plugins: [require("tailwind-scrollbar")],

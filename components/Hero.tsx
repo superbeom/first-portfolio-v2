@@ -1,14 +1,12 @@
 import React from "react";
-import Image from "next/image";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { SocialIcon } from "react-social-icons";
+import { motion } from "framer-motion";
 
 import { User, Social } from "@/types";
 import useStore from "@/store";
 
 import socialColors from "@/constants/socialColors";
-
-import { Circles } from "@/components";
 
 interface Props {
   user: User;
@@ -29,15 +27,22 @@ const Hero = ({ user, socials }: Props) => {
       id="hero"
       className="active layout flex-center flex-col text-center overflow-hidden"
     >
-      <Circles />
-
-      <Image
-        className="w-32 h-32 mx-auto ball object-cover my-8"
+      <motion.img
+        className="w-40 h-40 mx-auto object-cover my-8"
+        animate={{
+          scale: [1, 1.6, 2.3, 1.6, 1],
+          rotate: [0, 0, 360, 360, 0],
+          borderRadius: ["50%", "25%", "12%", "25%", "50%"],
+        }}
+        transition={{
+          duration: 4,
+          times: [0, 0.2, 0.5, 0.8, 1],
+          ease: "easeInOut",
+          repeat: Infinity,
+          repeatDelay: 1,
+        }}
         src={user.image}
         alt="profile"
-        width={128}
-        height={128}
-        priority
       />
 
       <div className="z-20">
