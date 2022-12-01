@@ -1,0 +1,46 @@
+{
+  "name": "boilerplace-nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "prebuild": "yarn prisma-generate",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "clear": "rm -rf .next",
+    "prisma-init": "npx prisma init",
+    "prisma-push": "npx prisma db push",
+    "prisma-studio": "npx prisma studio",
+    "prisma-generate": "npx prisma generate"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.6.1",
+    "framer-motion": "^7.6.7",
+    "moment": "^2.29.4",
+    "next": "13.0.4",
+    "prisma": "^4.6.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.6.0",
+    "react-simple-typewriter": "^4.0.5",
+    "react-slick": "^0.29.0",
+    "react-social-icons": "^5.15.0",
+    "slick-carousel": "^1.8.1",
+    "zustand": "^4.1.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
+    "@types/react-slick": "^0.23.10",
+    "autoprefixer": "^10.4.13",
+    "eslint": "^8.28.0",
+    "eslint-config-next": "^13.0.4",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "postcss": "^8.4.19",
+    "tailwind-scrollbar": "^2.0.1",
+    "tailwindcss": "^3.2.4",
+    "typescript": "^4.9.3"
+  }
+}

@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  box-sizing: border-box;
+  /* Prevent Drags */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Themes */
+@layer base {
+  .light {
+    --primary: rgb(253, 121, 168);
+    --primary-80: rgba(253, 121, 168, 0.8);
+    --background: rgb(240, 240, 240);
+    --background-light: rgb(181, 183, 183);
+    --content: rgb(54, 54, 54);
+    --content-light: rgb(74, 74, 74);
+    --content-10: rgba(54, 54, 54, 0.05);
+  }
+
+  .dark {
+    --primary: rgb(159, 224, 218);
+    --primary-80: rgba(159, 224, 218, 0.8);
+    --background: rgb(54, 54, 54);
+    --background-light: rgb(74, 72, 72);
+    --content: rgb(240, 240, 240);
+    --content-light: rgb(220, 220, 220);
+    --content-10: rgba(240, 240, 240, 0.02);
+  }
+}
+
+/* Styles */
+@layer components {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+  .layout {
+    @apply min-h-screen h-full;
+  }
+  .motion-container {
+    @apply relative flex flex-col lg:flex-row h-screen
+           justify-evenly items-center px-10 mx-auto;
+  }
+  .ball {
+    @apply rounded-full;
+  }
+  .pointer {
+    @apply cursor-pointer;
+  }
+  .title {
+    @apply absolute top-14 right-[50%] translate-x-[55%] uppercase
+           tracking-[20px] text-gray-500 text-lg sm:text-2xl;
+  }
+  .circle {
+    @apply absolute border border-background-light ball mt-52;
+  }
+  .panel-button {
+    @apply px-6 py-2 ball uppercase
+           text-sm text-gray-500 tracking-widest transition-all
+           hover:border-primary-80 hover:text-primary-80;
+  }
+  .about-role {
+    @apply uppercase text-gray-500 tracking-[2px];
+  }
+  .timeline {
+    @apply absolute top-10 left-0 lg:left-[50%] lg:translate-x-[50%] w-2 h-full bg-primary-80 ball;
+  }
+  .timedot {
+    @apply absolute w-4 h-4 left-0 lg:left-[50%] ball bg-content-light
+           -translate-x-[23%] lg:translate-x-[2%]
+           -translate-y-3 md:-translate-y-5;
+  }
+  .card-container {
+    @apply flex-center w-screen md:w-[80%] overflow-hidden
+           pl-[28vw] md:pl-3 lg:pl-0 pr-[4vw] md:pr-0 mt-20;
+  }
+  .card {
+    @apply relative w-full lg:w-[40%] flex bg-primary-80 rounded-xl p-2
+           before:absolute before:top-[13px]
+           before:border-y-[13px] before:border-y-transparent;
+  }
+  .card-left {
+    @apply before:right-[100%] before:border-r-[13px] before:border-r-primary-80 lg:before:border-r-0
+           lg:before:left-[100%] lg:before:border-l-[26px] lg:before:border-l-primary-80;
+  }
+  .card-right {
+    @apply before:right-[100%] before:border-r-[13px] lg:before:border-r-[26px] before:border-r-primary-80;
+  }
+  .contact-detail {
+    @apply flex-center space-x-5 text-xl md:text-2xl;
+  }
+  .contact-icon {
+    @apply text-primary-80 md:w-6 md:h-6;
+  }
+  .custom-scrollbar {
+    @apply scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-primary-80;
+  }
+  .check {
+    @apply border border-red-500;
+  }
+  .check-second {
+    @apply border border-yellow-500;
+  }
+}
